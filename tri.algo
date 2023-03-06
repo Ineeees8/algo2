@@ -1,0 +1,27 @@
+ALGORITHM algorithm_name
+VAR
+    set_declarations
+BEGIN
+    set_instructions
+END
+ALGORITHM SUM_of_number
+VAR
+   array_1 : ARRAY[4] OF INTEGER := [3,1,7,9];
+   array_2 : ARRAY[5] OF INTEGER := [2,4,1,9,3];
+   distinct_elements: ARRAY[9] OF INTEGER;
+   sum : INTEGER := 0;
+   count : INTEGER := 0;
+BEGIN
+   FOR i IN array_1 DO
+      IF i NOT IN distinct_elements THEN
+         distinct_elements[count] := i;
+         count := count + 1;
+      END_IF
+   END_FOR
+
+   FOR i IN array_2 DO
+      IF i NOT IN distinct_elements THEN
+         distinct_elements[count] := i;
+         count := count + 1;
+      END_IF
+   END_FOR
